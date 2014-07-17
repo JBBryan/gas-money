@@ -20,13 +20,9 @@ $(document).ready(function(){
   var regex = "/<text>(.*)<\/text>/"
   fillMakes = function(year){
     site = site + "make?year=" + year;
-    // yql = 'http://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('select * from xml where url="' + site + '"') + '&format=xml&callback=?';
-    var yql = 'http://query.yahooapis.com/v1/public/yql?'
-            + 'q=' + encodeURIComponent('select * from json where url=@url')
-            + '&url=' + encodeURIComponent(site)
-            + '&format=json&callback=?';
+    yql = 'http://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('select * from xml where url="' + site + '"') + '&format=xml&callback=?';
     $.getJSON(yql, function(data){
-      window.data = data;
+      window.data = data.results[0];
     });
   }
 
