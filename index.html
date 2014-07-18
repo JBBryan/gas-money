@@ -24,6 +24,16 @@
 <select id="options">
   <option>Options</option>
 </select>
+<label for="mileage">Mileage</label>
+<input type="text" id="mileage">
+<button>Calculate</button>
+<h1 class="success">Your car gets an average of: <span class="mpg"></span> miles per gallon</h1>
+<h3 class="success">The average gas price over the lifetime of your car is $<span class="avg-price"></span>/gallon</h3>
+<h3 class="success">Having travelled <span class="miles"></span> miles, your car has consumed aproximately <span class="gallons"></span> gallons of gas!</h3>
+<h3 class="success">That's about $<span class="gas-money"></span> in gas!</h3>
+<h1 class="failure">Sorry I don't have data on the fuel efficiency of your car!</h1>
+<label for="mpg" class="failure"></label>
+<input type="text" id="mpg" class="failure" placeholder="example: 24mpg">
 </body>
 <script src="script.js"></script>
 </html>
